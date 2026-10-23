@@ -10,4 +10,5 @@ extend-immutable-calls = ["fastapi.File", "fastapi.Depends"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 filterwarnings = ["ignore::DeprecationWarning"]
