@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest>=8
+ruff>=0.6
+# only needed for CITADOC_VECTOR_STORE=pgvector
+psycopg[binary]>=3.1

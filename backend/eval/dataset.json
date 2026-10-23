@@ -1,0 +1,24 @@
+{
+  "in_scope": [
+    {"question": "¿Cuántos días de vacaciones tiene un empleado a jornada completa?", "doc": "politica_vacaciones_teletrabajo.md", "expected": "23 días"},
+    {"question": "¿Con cuánta antelación hay que pedir las vacaciones?", "doc": "politica_vacaciones_teletrabajo.md", "expected": "15 días"},
+    {"question": "¿Hasta qué fecha se pueden usar los días de vacaciones trasladados?", "doc": "politica_vacaciones_teletrabajo.md", "expected": "31 de marzo"},
+    {"question": "¿Cuántos días a la semana se puede teletrabajar?", "doc": "politica_vacaciones_teletrabajo.md", "expected": "2 días"},
+    {"question": "¿Qué compensación económica se recibe por teletrabajar?", "doc": "politica_vacaciones_teletrabajo.md", "expected": "35 euros"},
+    {"question": "¿A partir de qué altura es obligatorio el arnés anticaídas?", "doc": "manual_seguridad_obra.md", "expected": "2 metros"},
+    {"question": "¿Cuántas horas dura el curso de prevención de riesgos laborales?", "doc": "manual_seguridad_obra.md", "expected": "20 horas"},
+    {"question": "¿En qué plazo se comunica un accidente al departamento de prevención?", "doc": "manual_seguridad_obra.md", "expected": "24 horas"},
+    {"question": "¿Quién puede paralizar un trabajo peligroso?", "doc": "manual_seguridad_obra.md", "expected": "coordinador"},
+    {"question": "¿Quién aprueba un pedido de 10.000 euros?", "doc": "procedimiento_compras_proveedores.md", "expected": "director de compras"},
+    {"question": "¿Cuántos presupuestos hacen falta para un pedido grande?", "doc": "procedimiento_compras_proveedores.md", "expected": "tres presupuestos"},
+    {"question": "¿A cuántos días se pagan las facturas de proveedores?", "doc": "procedimiento_compras_proveedores.md", "expected": "60 días"},
+    {"question": "¿Qué documentos se piden para homologar a un proveedor?", "doc": "procedimiento_compras_proveedores.md", "expected": "Seguridad Social"},
+    {"question": "¿Qué pasa con una factura que no indica el número de pedido?", "doc": "procedimiento_compras_proveedores.md", "expected": "se devuelve"}
+  ],
+  "out_of_scope": [
+    "¿Cuál es la capital de Francia?",
+    "Dame una receta de tortilla de patatas",
+    "¿Quién ganó el último mundial de fútbol?",
+    "¿Cómo se configura un router wifi?"
+  ]
+}

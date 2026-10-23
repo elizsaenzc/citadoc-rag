@@ -1,0 +1,36 @@
+# Full stack with PostgreSQL + pgvector.
+#   docker compose up --build        -> http://localhost:8000
+# Without an API key it runs in demo mode; put your keys in a .env file to use a real LLM.
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: citadoc
+      POSTGRES_PASSWORD: citadoc
+      POSTGRES_DB: citadoc
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U citadoc"]
+      interval: 5s
+      retries: 10
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      CITADOC_VECTOR_STORE: pgvector
+      CITADOC_DATABASE_URL: postgresql://citadoc:citadoc@db:5432/citadoc
+    volumes:
+      - appdata:/app/data   # conversations and document registry survive restarts
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+  appdata:

@@ -1,0 +1,10 @@
+# One-click deploy on Render (free plan): New -> Blueprint -> select this repository.
+# Runs in demo mode (no API keys). Add CITADOC_LLM_PROVIDER and a key in the
+# Render dashboard to use a real LLM.
+services:
+  - type: web
+    name: citadoc
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
